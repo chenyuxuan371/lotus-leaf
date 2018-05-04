@@ -2,7 +2,9 @@ import '../css/uwsolar.css';
 
 import AboutRoute from './about-route.jsx';
 import Button from 'material-ui/Button';
+
 import HomeRoute from './home-route.jsx';
+import BuildingsRoute from './buildings-route.jsx';
 import PrimaryHeader from './primary-header.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -45,11 +47,13 @@ class App extends React.Component {
           <div>
             <PrimaryHeader title="Solar Power Monitor">
               <Button color="inherit"><Link to="/">Home</Link></Button>
-              <Button color="inherit" className="{classes.button}"><Link to="/about">About</Link></Button>
+              <Button color="inherit" className="{classes.button}"><Link to="/buildings">Buildings</Link></Button>
+	      <Button color="inherit" className="{classes.button}"><Link to="/about">About</Link></Button>
             </PrimaryHeader>
             <div className={classes.content}>
               <Route exact path="/" component={HomeRoute} />
-              <Route exact path="/about" component={AboutRoute} />
+              <Route exact path="/buildings" component={BuildingsRoute} />
+	      <Route exact path="/about" component={AboutRoute} />
             </div>
           </div>
         </HashRouter>
